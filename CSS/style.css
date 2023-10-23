@@ -1,0 +1,424 @@
+
+@import url('https://fonts.cdnfonts.com/css/heavy-heap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('fontawesome-free-6.4.2-web/css/all.min.css');
+
+:root{
+    --color1:#C16422;
+    --color2:#155f93;
+    --color3:#0D1481;
+    --color4:#C5530F;
+    --color5:#C0EEFA;
+    --color6:#6B1624;
+    --color7:#E3913A;
+    --color8:#9C2E19;
+    --color9:#0B0300;
+    --color10:#68220B;
+    --color-blanco: #ffffff;
+    --color-negro:#000000;
+}
+
+img {
+    /* Para que sea responsiva */
+    width: 100%;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 17px ;
+    font-weight: 300;
+    position: relative;
+}
+
+#autos p::before{
+    content: "";
+    width: 42px;
+    height: 4.1px;
+    background-color: #05b500;
+    position: absolute;
+    bottom: -5px;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    font-family: 'Heavy Heap', sans-serif;
+    line-height: 1em;
+    text-transform: uppercase; 
+}
+
+h1{
+    font-size: 75px;
+    font-weight: 900;
+    
+}
+h2{
+    font-size: 60px ;
+    font-weight: 700;
+    position: relative;
+}
+
+#Team h2{
+    border-bottom: solid 5px #F21D92
+}
+
+h3{
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+h4{
+    font-size: 21px;
+    font-weight: 300;
+}
+
+#movies h3 {
+    color: var(--color6);
+}
+
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+a{
+    color: var(--color2);
+    text-decoration: none; 
+}
+
+#main-header{
+    background-color: var(--color-negro);
+    color: #E3913A;
+
+}
+
+#main-banner{
+    background-color: #000000;
+}
+
+#movies{
+    background-color: var(--color1);
+
+}
+
+#movies img{
+    border-radius: 60px 1100px 1100px 60px
+}
+
+#reinos{
+    background-color: yellowgreen;
+}
+
+#reinos .col{
+    margin: 10px;
+    position: relative;
+}
+#reinos .row{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#reinos img{
+    border-radius: 0 30px 0 0;
+}
+
+.imgReino{
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    background-color: rgba(0,0,0,0.8);
+    color: var(--color-blanco);
+    padding: 5px 10px;
+    border-radius: 20px 0 0 0;
+}
+
+#Team{
+    background-color: var(--color3);
+    color: var(--color5);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    letter-spacing: -3px;
+    padding: 50px;
+}
+
+#Team h2{
+    border-bottom: solid 5px #F21D92
+}
+
+#equipos{
+    padding-left:5%;
+    padding-right: 5%;
+    text-align: left right;
+    padding: 20px;
+}
+
+#personajes_lideres{
+    background-color: #90450a;
+    color: #fce454;
+}
+
+#personajes_lideres h3{
+    border-left: solid 5px greenyellow;
+    padding: 10px;
+}
+
+#personajes_lideres .col{
+    border: rgba(255, 255, 255, 0.2) 10px solid;
+    padding-top: 15px;
+    border-image: linear-gradient(180deg, var(--color5) 0%, var(--color2) 100%) 1;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+#anuncio{
+    background-image: url("../Images/Fondo.jpg");
+    background-size: cover;
+    background-position: right bottom;
+    color: var(--color-blanco);
+}
+
+#autos{
+    background-image: linear-gradient(110deg, var(--color3) 16.6%, var(--color2) 33.3%, var(--color5)49.9%, 
+    var(--color7) 66.6%, var(--color8) 83.3%, var(--color10) 100%);
+}
+#autos h2{
+    margin-bottom: 20px;
+    font-size: 90px;
+    letter-spacing: 0.04em;
+}
+
+#autos img{
+    box-shadow: 2px 2px 17px 8px rgba(0,0,0,0.60)
+}
+
+#autos a{
+    color:rgba(100, 0, 0, 1)
+}
+
+#personajes_extras{
+    background-color: #d7d7e3ff;
+    color: #5f3477;
+}
+
+#personajes_extras h3{
+    border-left: solid 5px greenyellow;
+    padding: 10px;
+}
+
+#personajes_extras .col{
+    border: rgba(255, 255, 255, 0.2) 10px solid;
+    padding-top: 15px;
+    border-image: linear-gradient(180deg, var(--color6) 0%, var(--color1) 100%) 1;
+    margin-bottom: 10px;
+    margin-top: 15px
+}
+#ultimate_race{
+    background-image: url("../Images/Ultimate\ Race.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: right;
+    color: greenyellow;
+}
+
+#main-footer{
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    text-align: right;
+}
+
+.padded{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.row{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row-reverse{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-direction: row-reverse ;
+}
+
+.col{
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1000px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-fluid-2{
+    max-width: 100%;
+    background-size: cover;
+
+}
+
+.image-fluid{
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+.vertical-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.col66{
+    flex-basis: 66.67%;
+    max-width: 66.67%;
+}
+
+.col50{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.col31_3{
+    flex-basis: 31.3%;
+    max-width: 31.3%;
+}
+.padding-bottom{
+    padding-bottom: 35px;
+}
+.TK{
+    background-color: var(--color4);
+    text-align: right;
+    color: blue;
+}
+
+.MM{
+    background-color: var(--color6);
+    text-align: left;
+}
+
+.RD{
+    background-color:greenyellow ;
+    text-align: right;
+    color:var(--color-blanco)
+}
+
+.SI{
+    background-color: #8710b3;
+    text-align: left;
+    color: #918390;
+}
+
+.imgfueracoches{
+    margin-bottom: -30px;
+    margin-top: -30px;
+    border-radius: 100px 10px 100px 10px;
+}
+
+.imgfueracoches-reverse{
+    margin-bottom: -30px;
+    margin-top: -30px;
+    border-radius: 10px 100px 10px 100px;
+}
+
+.hypertext{
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: -3.5px;
+
+}
+
+.resaltar{
+    color: var(--color-blanco);
+}
+.resaltar1{
+    color: var(--color4);
+}
+.resaltar2{
+    color: #0D1481;
+}
+.resaltar3{
+    color:greenyellow
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.columna {
+    float: left;
+    width: 100%;
+    padding-right: 30px;
+}
+
+.fila::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.letrabajo{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.llamas{
+    background-image: url(../Images/fondollamas.jpg);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-clip: text;
+}
+
+.contenedorimagen{
+    position: relative
+}
+
+.textoimagen{
+    position: absolute;
+    background-color: greenyellow;
+    padding: 10px;
+    bottom: -20px;
+    left: calc(5% + 6px);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.descripcion-imagen{
+    position: absolute;
+    color: var(--color-blanco);
+    top: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 68%);
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
+
+.botonvinculo{
+    border: solid;
+    border-radius: 75%;
+    padding: 3.5px;
+    margin-left: 4px;
+    width: fit-content;
+}
