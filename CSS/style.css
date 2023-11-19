@@ -18,6 +18,10 @@
     --color-negro:#000000;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 img {
     /* Para que sea responsiva */
     width: 100%;
@@ -26,24 +30,18 @@ img {
 p{
     margin-top: 0;
     margin-bottom: 24px;
-    font-size: 17px ;
-    font-weight: 300;
+    font-size: 18px ;
+    font-weight: 500;
     position: relative;
+    
 }
 
-#autos p::before{
-    content: "";
-    width: 42px;
-    height: 4.1px;
-    background-color: #05b500;
-    position: absolute;
-    bottom: -5px;
-}
 h1, h2, h3, h4, h5, h6{
     margin: 0;
     font-family: 'Heavy Heap', sans-serif;
     line-height: 1em;
     text-transform: uppercase; 
+    cursor: context-menu;
 }
 
 h1{
@@ -75,6 +73,16 @@ h4{
 
 #movies h3 {
     color: var(--color6);
+    margin: 15px 0;
+}
+
+#movies img{
+    transition: all 1s ease-in-out;
+}
+
+#movies img:hover{
+    transform: translateX(-15px);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.8);
 }
 
 body{
@@ -82,6 +90,9 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 
+#movies h2, #reinos h2, #Team h2{
+    margin: 50px 0;
+}
 img{
     display: block;
 }
@@ -94,7 +105,20 @@ a{
 #main-header{
     background-color: var(--color-negro);
     color: #E3913A;
+    text-align: center;
+}
+#barraNavegador{
+    background-color: var(--color-negro);
+    color: #E3913A;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
+#contenedor-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #main-banner{
@@ -103,7 +127,15 @@ a{
 
 #movies{
     background-color: var(--color1);
-
+}
+#movies h2 {
+    color: var(--color-negro);
+    width: fit-content;
+    border-bottom: solid gray;
+}
+#movies h2:hover{
+    color: var(--color3);
+    border-bottom: solid var(--color2);
 }
 
 #movies img{
@@ -114,27 +146,46 @@ a{
     background-color: yellowgreen;
 }
 
+#reinos h2 a{
+    color: var(--color-negro);
+    border-bottom: solid gray;
+}
+#reinos h2 a:hover{
+    color: var(--color3);
+    border-bottom: solid var(--color2);
+}
+
 #reinos .col{
     margin: 10px;
     position: relative;
+    transition: all .6s ease-in-out;
 }
 #reinos .row{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 50px 0;
 }
 
 #reinos img{
     border-radius: 0 30px 0 0;
+    
+}
+
+#reinos .col:hover{
+    transform: scale(1.15,1.15) ;
+}
+#reinos .col img:hover{
+    box-shadow: 0px 0px 35px 6px rgba(0,0,0,0.8)
 }
 
 .imgReino{
     position: absolute;
     bottom: 0;
-    right: 15px;
+    right: 16.3px;
     background-color: rgba(0,0,0,0.8);
     color: var(--color-blanco);
-    padding: 5px 10px;
+    padding: 10px 15px;
     border-radius: 20px 0 0 0;
 }
 
@@ -159,11 +210,27 @@ a{
     padding: 20px;
 }
 
+#equipos p{
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
 #personajes_lideres{
     background-color: #90450a;
     color: #fce454;
 }
 
+#personajes_lideres p{
+    margin: 18px 0;
+}
+
+#personajes_lideres a:hover{
+    color: var(--color6);
+}
+
+#personajes_lideres h4{
+    font-size: 1.6em;
+}
 #personajes_lideres h3{
     border-left: solid 5px greenyellow;
     padding: 10px;
@@ -181,24 +248,65 @@ a{
     background-size: cover;
     background-position: right bottom;
     color: var(--color-blanco);
+    padding: 115px 0;
 }
 
+#videos{
+    color: #3E4465;
+    background-color: transparent;
+    background-image: radial-gradient(circle, #FF5F39 55%, #FD4426 70%);
+}
+#videos .row{
+    flex-direction: column;
+    align-items: center;
+}
+
+#videos .row iframe{
+    margin: 40px 0;
+}
 #autos{
     background-image: linear-gradient(110deg, var(--color3) 16.6%, var(--color2) 33.3%, var(--color5)49.9%, 
     var(--color7) 66.6%, var(--color8) 83.3%, var(--color10) 100%);
 }
 #autos h2{
-    margin-bottom: 20px;
+    margin: 45px 0;
     font-size: 90px;
     letter-spacing: 0.04em;
 }
 
 #autos img{
-    box-shadow: 2px 2px 17px 8px rgba(0,0,0,0.60)
+    box-shadow: 2px 2px 12px 6px rgba(0,0,0,0.6);
+    transition: all .6 ease-in-out;
+}
+
+#autos img:hover{
+    transform: scale(1.15,1.15);
+    box-shadow: 2px 2px 25px 15px rgba(0,0,0,0.8);
 }
 
 #autos a{
-    color:rgba(100, 0, 0, 1)
+    color:rgba(100, 0, 0, 1);
+}
+
+#autos a:hover{
+    color:rgba(5, 181, 0, 0.8)
+}
+
+#movies, #autos, #reinos{
+    padding: 50px 0;
+}
+
+#autos p{
+    margin: 35px 0;
+}
+
+#autos p::before{
+    content: "";
+    width: 42px;
+    height: 4.1px;
+    background-color: #05b500;
+    position: absolute;
+    bottom: -5px;
 }
 
 #personajes_extras{
@@ -222,14 +330,51 @@ a{
     background-image: url("../Images/Ultimate\ Race.jpg");
     background-size: cover;
     background-attachment: fixed;
+    background-position: bottom left;
     text-align: right;
     color: greenyellow;
+    padding: 80px 0;
 }
 
 #main-footer{
     background-color: var(--color-negro);
     color: var(--color-blanco);
     text-align: right;
+}
+
+#ir-arriba{
+    background-image: url(../Images/RuedaArriba.png);
+    background-size: cover;
+    padding: 30px;
+    background-color: var(--color6);
+    color: var(--color-blanco);
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: all .5s ease-in-out;
+}
+
+#ir-arriba:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+}
+
+#videojuegos{
+    padding: 100px 0;
+    background-color: rgba(13, 20, 130, 0.9);
+}
+
+#videojuegos h2{
+    color: var(--color8);
+    border-bottom: solid 8px var(--color10);
+    width: fit-content;
+}
+
+#videojuegos h2:hover{
+    color: greenyellow;
+    border-bottom: solid 8px green;
 }
 
 .padded{
@@ -259,7 +404,7 @@ a{
 }
 
 .container{
-    max-width: 1000px;
+    max-width: 1400px;
     padding-left: 10px;
     padding-right: 10px;
     margin-left: auto;
@@ -269,13 +414,10 @@ a{
 .image-fluid-2{
     max-width: 100%;
     background-size: cover;
-
 }
 
 .image-fluid{
     max-width: 100%;
-    width: 300px;
-    height: 300px;
 }
 
 .vertical-center{
@@ -337,11 +479,11 @@ a{
 }
 
 .hypertext{
-    font-size: 58px;
+    font-size: 5.8em;
     font-weight: 700;
     line-height: 1.2em;
     letter-spacing: -3.5px;
-
+    text-shadow: -5px 5px 15px rgba(0,0,0,0.75);
 }
 
 .resaltar{
@@ -364,7 +506,7 @@ a{
 .columna {
     float: left;
     width: 100%;
-    padding-right: 30px;
+    padding-right: 60px;
 }
 
 .fila::after {
@@ -378,6 +520,11 @@ a{
     font-weight: 600;
     font-size: 25px;
     font-family: 'Ubuntu', sans-serif;
+}
+
+.logoMenu{
+    max-width: 175px;
+    max-height: 85px;
 }
 
 .llamas{
@@ -396,7 +543,7 @@ a{
     position: absolute;
     background-color: greenyellow;
     padding: 10px;
-    bottom: -20px;
+    bottom: -23.5px;
     left: calc(5% + 6px);
     font-size: 20px;
     font-weight: 700;
@@ -421,4 +568,68 @@ a{
     padding: 3.5px;
     margin-left: 4px;
     width: fit-content;
+}
+
+.video_16_9{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu li a{
+    display: block;
+}
+.menu-main li a{
+    padding: 30px 55px;
+    text-transform:uppercase;
+    color:#E3913A;
+    font-weight: 700;
+    font-size: 20px;
+    border-bottom: solid 4px transparent;
+} 
+.menu-main li a:hover{
+    text-decoration: none;
+    color: var(--color2);
+    border-bottom: solid 4px;
+}
+
+.tabla-datos{
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color:var(--color2);
+    color: var(--color5);
+}
+
+.tabla-datos thead tr th{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color5);
+    padding: 10px;
+    text-align: center;
+    border: solid 1px rgba(0, 0, 0, 0.4);
+}
+
+.tabla-datos tbody tr td{
+    border: solid 1px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla-datos tbody tr:nth-child(odd){
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tabla-datos tbody tr:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.imagen-tabla{
+    width: 150px;
+    height: 190px;
 }
