@@ -1,0 +1,125 @@
+@media(max-width: 1405px){
+    #barraNavegador .container{
+        padding: 0;
+    }
+    
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-main li a {
+        font-size: 18px;
+        padding: 28px 45px;
+    }
+}
+
+@media(max-width: 1360px){
+    .menu-main li a {
+        font-size: 18px;
+        padding: 28px 40px;
+    }
+
+    .logoMenu{
+        max-width: 175px;
+        max-height: 81px;
+    }
+    
+    #equipos p{
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width: 1245px){
+    .menu-main li a {
+        font-size: 18px;
+        padding: 28px 32px;
+    }
+
+    .logoMenu{
+        max-width: 175px;
+        max-height: 81px;
+    }
+
+    #movies p{
+        font-size: 20px;
+    }
+
+    #movies .row{
+        flex-direction: column;
+    }
+
+    #movies .col{
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textoimagen{
+        left: calc(100% - 55%);
+    }
+
+    #movies img{
+        width: 310px;
+    }
+
+    #equipos{
+        padding: 30px 55px;
+    }
+
+    #equipos p{
+        font-size: 1.3em;
+    }
+
+    #personajes_lideres .row{
+        flex-direction: column;
+    }
+
+    #personajes_lideres p{
+        font-size: 20px;
+    }
+
+    #anuncio{
+        background-position: center right;
+    }
+
+    .letrabajo{
+        font-size: 21px;
+    }
+
+    .video_16_9{
+        width: 800px;
+    }
+    
+    .hypertext{
+        font-size: 5.4em;
+        line-height: 1em;
+    }
+
+    #ir-arriba{
+        right: 0;
+    }
+}
+
+
+@media(max-width: 1070px){
+    .menu-main li a{
+        display: none;
+    }
+
+    .hypertext{
+        font-size: 5em;
+    }
+}
+
+@media(max-width: 960px){
+    .hypertext{
+        font-size: 4.5em;
+    }
+
+    .letrabajo{
+        font-size: 19px;
+    }
+}
