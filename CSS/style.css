@@ -598,7 +598,7 @@ a{
 
 .contenedorimagen{
     position: relative;
-    animation: animacion-peliculas 8s ease-out;
+    animation: animacion-peliculas 5s ease-out;
 }
 
 .textoimagen{
